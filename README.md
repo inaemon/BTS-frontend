@@ -1,11 +1,20 @@
 # Demo
-- 1차, 2024.06.26
+- 1차, 2024.06.26, 2번째 commit
   - https://youtu.be/MrY2w13auQI
-- 2차, 2024.06.27
-  1.Proxy설정하여 외부 API 접속되도록 코드 및 package.json수정
-  2. 로그인페이지 네이버 클라우드 DB USER 정보 조회 연동
-  3. 사용자목록 네이버 클라우드 DB USER 리스트 조회 연동
-  4. 챗봇페이지 로그인 사용자정보 표시
+- 2차, 2024.06.27, 3번째 commit
+  - https://youtu.be/che1HsR7h4c
+  1. 백엔드와 연동 완료
+  2. Proxy설정하여 외부 API 접속되도록 코드 및 package.json수정
+  3. 로그인페이지 네이버 클라우드 DB USER 정보 조회 연동
+  4. 사용자목록 네이버 클라우드 DB USER 리스트 조회 연동
+  5. 챗봇페이지 로그인 사용자정보 표시
+- 3차, 2024.06.29, 4번째 commit
+  - https://youtu.be/_MpsRABFXpY
+  - 로딩창 구현
+  - UI 업데이트
+- 4차, 2024.06.29, 5번째 commit
+  - https://youtu.be/knpAB1a2IY4
+  - 로딩창과 UI 업데이트
 
 
 # Getting Started with Create React App

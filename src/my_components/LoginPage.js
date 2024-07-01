@@ -77,7 +77,7 @@ function LoginPage() {
             marginBottom: '300px'       // div 아래 띄우기
         }}>
             {/** 컴포넌트(1)제목 */}
-            <h1 style={{ marginTop: '15vh' }}>Login Page</h1>
+            <h1 style={{ marginTop: '15vh', fontFamily: 'BMDoHyeon' }}>로그인</h1>
 
             {/** 컴포넌트(2)입력창: 텍스트필드와 버튼을 한 줄로 묶고 싶어서 div로 묶음  */}
             <div style={{ marginTop: '10vh' }}>
@@ -94,13 +94,15 @@ function LoginPage() {
                         onMouseLeave={handleMouseLeave}          // 마우스 떠났다고 알리기
                         style={{
                             fontWeight: 'bold',
+                            fontSize: '15px',
+                            fontFamily: 'BMDoHyeon',
                             padding: '10px 20px',
                             backgroundColor: hoveredItem === 0 ? '#7CDBFF' : '#25C2FF', // 마우스가 접근한 아이템의 index 0일 경우, 아닐 경우 배경색 다르게
                             color: 'white',
                             border: 'none', borderRadius: '5px', cursor: 'pointer'
                         }}
                 >
-                    로그인
+                    접속
                 </button>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
             </div>
@@ -112,6 +114,7 @@ function LoginPage() {
                     onMouseLeave={handleMouseLeave}             // 마우스 떠났다고 알리기
                     style={{
                         cursor: 'pointer',
+                        fontFamily: 'BMDoHyeon',
                         color: hoveredItem === 1 ? 'gray' : 'black'  // 마우스가 접근한 아이템의 index 1일 경우, 아닐 경우 글자색 다르게
                     }}
                 >
@@ -122,6 +125,7 @@ function LoginPage() {
                     onMouseLeave={handleMouseLeave}             // 마우스 떠났다고 알리기
                     style={{
                         cursor: 'pointer',
+                        fontFamily: 'BMDoHyeon',
                         color: hoveredItem === 2 ? 'gray' : 'black'  // 마우스가 접근한 아이템의 index 2일 경우, 아닐 경우 글자색 다르게
                     }}
                 >

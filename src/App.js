@@ -69,7 +69,7 @@
  * - 해결법: npm install
  * 
  */
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // 라우팅을 위한 Components 가져오기
 import {Routes, Route, Link} from "react-router-dom";
@@ -78,8 +78,6 @@ import {Routes, Route, Link} from "react-router-dom";
 import MyHeader from "./my_components/common_components/MyHeader";
 import MyFooter from "./my_components/common_components/MyFooter";
 
-import Loading from "./my_components/Loading";  // 로딩 화면 추가
-
 import LoginPage from "./my_components/LoginPage";
 import FirstPage from "./my_components/FirstPage";
 import SignUpPage from "./my_components/SignUpPage";
@@ -87,29 +85,6 @@ import ChatPage from "./my_components/ChatPage";
 import UserListPage from "./my_components/UserListPage";
 
 function App() {
-  //변수(1) 로딩 여부
-  const [loading, setLoading] = useState(true);
-
-  //함수(1) 로딩 여부 업데이트
-  useEffect(() => {
-    // 데이터 가져오기 시뮬레이션 (예: API 호출)
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000); // 2초 후에 로딩 상태를 false로 변경
-  }, []);
-
-  //시각화(1) 로딩 화면
-  if (loading) {
-    return (
-      <div>
-        <MyHeader/>
-        <Loading />
-        <MyFooter/>
-      </div>
-    );
-  }
-
-
   //시각화(2) 정상 화면
   return (
     // [1] Link tag: 이동 경로 (browser path) 설정

@@ -3,6 +3,7 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
+    font-family: BMDoHyeon;
 
     /*버튼 형태*/
     background-color: #25C2FF;
@@ -25,6 +26,7 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
+    font-family: BMDoHyeon;
 
     /*버튼 형태*/
     background-color: #7CDBFF;
@@ -47,6 +49,7 @@
     /*폰트*/
     font-size: 15px;
     font-weight: bold;
+    font-family: BMDoHyeon;
     color: white;
 
     /*버튼 형태*/
@@ -72,6 +75,8 @@
 
 .blue-button {
     font-weight: bold;
+    font-family: BMDoHyeon;
+
     padding: 10px 20px;
     background-color: #25C2FF;
     color: white;
@@ -82,6 +87,8 @@
 
 .blue-button:hover {
     font-weight: bold;
+    font-family: BMDoHyeon;
+    
     padding: 10px 20px;
     background-color: #7CDBFF;
     color: white;

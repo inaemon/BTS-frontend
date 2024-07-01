@@ -22,11 +22,12 @@ function BotInfoComponent() {
              <img src="./inae_images/bot.png" style={{width: '150px'}}/>
 
              {/** 봇 이름 */}
-             <h4>유행이</h4>
+             <h4 style={{fontFamily: 'BMDoHyeon'}}>유행이</h4>
             
             {/** 봇 상세 정보 */}
              <div className='botDetail'
                   style={{
+                    fontFamily: 'BMJua',
                     borderRadius: '5px',
                     backgroundColor: '#F7F8FA', // 배경색
                     color: '#63625D',   // 글자색 
@@ -37,11 +38,9 @@ function BotInfoComponent() {
                     borderColor: '#E8E8DF' // 테두리색
                   }}
              >
-                <p><strong>캐릭터 정보: </strong>옷 스타일을 추천해주는 비서봇</p>
-                <p><strong>말투: </strong>친절하고 예의바름</p>
-                <p><strong>성격: </strong>딱딱해보일 수 있지만 가끔 유머를 섞어 분위기 전환을 잘함</p>
-                <p><strong>MBTI: </strong>ENFJ, 외향적인 성격을 갖고 있지만 비서 역할을 충실히 해냄</p>
-                <p><strong>기타: </strong>봇이라는 특성상 성별, 나이가 취향 등 따로 없고 친절하게 안내해주는 스타일</p>
+                <p>
+                    패션에 대해 궁금한 거 있어?<br/>나, 유행이가 해결해줄게. 질문해봐!
+                </p>
              </div>
         </div>
     );

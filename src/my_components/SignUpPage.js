@@ -61,7 +61,7 @@ function SignUpPage() {
                 initialValues={{ remember: true }}
                 onFinish={handleSave}
             >
-                <h1>회원 정보를 입력해주세요.</h1>
+                <h1 style={{fontFamily: 'BMDoHyeon', padding: '15px'}}>회원 정보 입력</h1>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', textAlign: 'left', padding: '15px' }}>
                     <Form.Item
                         name="id"
@@ -99,7 +99,7 @@ function SignUpPage() {
                     </Form.Item>
 
                     <Form.Item>
-                        <Button onClick={handleBack}>뒤로 가기</Button>
+                        <Button onClick={handleBack} style={{fontFamily: 'BMDoHyeon'}}>뒤로 가기</Button>
                         <Button className='blue-button' type="primary" htmlType="submit">
                             저장
                         </Button>

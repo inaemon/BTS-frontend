@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import { Layout, Row, Col, Button } from 'antd';
 
@@ -6,6 +6,9 @@ import { Layout, Row, Col, Button } from 'antd';
 import BotInfo from "./chat_components/BotInfo";
 import Chatting from "./chat_components/Chatting";
 import InputField from "./chat_components/InputField";
+
+// 로딩 화면 추가
+import Loading from "./Loading";
 
 function ChatbotPage() {
     //변수(1)
@@ -25,9 +28,50 @@ function ChatbotPage() {
     };
     
 
+    
+    
+    /////////////////////////////////////////////////////////////////
+    // 챗봇 채팅 페이지 한정 로딩 소요시 로딩 이미지 띄우기
+    /////////////////////////////////////////////////////////////////
+    //변수(1) 로딩 여부
+    const [loading, setLoading] = useState(true);
+
+    //함수(1) 로딩 여부 업데이트
+    useEffect(() => {
+        // 데이터 가져오기 시뮬레이션 (예: API 호출)
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000); // 2초 후에 로딩 상태를 false로 변경
+    }, []);
+    
+    //시각화(1) 로딩 화면
+    if (loading) {
+        return (
+            <div>
+            <Loading />
+            </div>
+        );
+    }
+
+    
+    /////////////////////////////////////////////////////////////////
+    // 정상 페이지
+    /////////////////////////////////////////////////////////////////
     // Visualization: 화면에 보여줄 내용, Component
     return (
         <div>
+            {/** 로딩 여부: 로딩시 로딩 이미지 띄우기 */}
+            {
+                /*
+                if(loading) {
+                    <img src="./inae_images/loading.gif" alt="로딩중"/>
+                }
+                */
+                loading ? (
+                    <img src="./inae_images/loading.gif" alt="로딩중" />
+                ) : null
+            }
+
             {
             /** 
              * [ 채팅창    | 챗봇정보]
@@ -40,6 +84,7 @@ function ChatbotPage() {
             {user && (
                 <div style={{ backgroundColor: '#ffffff' }}>
                     <h4 style={{ 
+                            fontFamily: 'BMDoHyeon',
                             marginTop: '10px', 
                             marginBottom: '10px', 
                             padding: '15px', 

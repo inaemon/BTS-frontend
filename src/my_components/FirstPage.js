@@ -27,7 +27,7 @@ function Page1() {
                     backgroundImage: "url('./inae_images/main.png')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    opacity: 0.7,
+                    opacity: 0.35,
                     zIndex: -1
                  }}
             >
