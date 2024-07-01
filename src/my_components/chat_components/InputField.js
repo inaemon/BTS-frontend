@@ -54,16 +54,7 @@ function InputFieldComponent({ setResponseText }) {
                           borderRadius: '5px'
                       }}
               />
-              <button type="submit" 
-                      style={{ 
-                          fontSize: '15px', fontWeight: 'bold',
-                          alignSelf: 'flex-end', /* flex tag 내 아이템들은 기본적으로 가운데 정렬, 버튼 아이템만 우측 정렬 */
-                          padding: '10px 20px', 
-                          backgroundColor: '#25C2FF', 
-                          color: 'white', 
-                          border: 'none', 
-                          borderRadius: '5px', 
-                          cursor: 'pointer' }}>
+              <button className="right-blue-button" type="submit">
                   전송</button>
             </form>
         </div>

@@ -53,17 +53,17 @@ function LoginPage() {
         navigate('/join');
     };
     
-    //이벤트(2) 사용자 목록 페이지로 전환
+    //이벤트(3) 사용자 목록 페이지로 전환
     const handleUserList = () => {
         navigate('/user-list');
     };
 
-    //이벤트(3) 마우스 커서가 아이템 내로 접근 체크
+    //이벤트(4) 마우스 커서가 아이템 내로 접근 체크
     const handleMouseEnter = (index) => {
         setHoveredItem(index);
     };
 
-    //이벤트(4) 마우스 커서가 아이템 밖으로 떠났을 때 체크
+    //이벤트(5) 마우스 커서가 아이템 밖으로 떠났을 때 체크
     const handleMouseLeave = () => {
         setHoveredItem(null);
     };
@@ -93,6 +93,7 @@ function LoginPage() {
                         onMouseEnter={() => handleMouseEnter(0)} // 마우스 접근시 아이템의 index를 0으로 넣기
                         onMouseLeave={handleMouseLeave}          // 마우스 떠났다고 알리기
                         style={{
+                            fontWeight: 'bold',
                             padding: '10px 20px',
                             backgroundColor: hoveredItem === 0 ? '#7CDBFF' : '#25C2FF', // 마우스가 접근한 아이템의 index 0일 경우, 아닐 경우 배경색 다르게
                             color: 'white',

@@ -1,0 +1,91 @@
+.big-blue-button {
+    /*버튼 내 텍스트 형태*/
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    /*버튼 형태*/
+    background-color: #25C2FF;
+    border: 0;
+    height: 45px;
+    width: 200px;
+    border-radius: 10px;      /*모서리를 둥글게 설정*/
+    margin: 0 auto;           /*가로에서 가운데로 위치*/
+    
+    /*이벤트*/
+    cursor: pointer;
+
+    /*공백*/
+    margin-top: 15vh;         /*15% 위치에 배치*/
+    margin-bottom: 20vh;      /*바닥으로부터 떨어진 거리 (컴포넌트의 끝 위치)*/
+}
+
+.big-blue-button:hover {
+    /*버튼 내 텍스트 형태*/
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    /*버튼 형태*/
+    background-color: #7CDBFF;
+    border: 0;
+    height: 45px;
+    width: 200px;
+    border-radius: 10px;      /*모서리를 둥글게 설정*/
+    margin: 0 auto;           /*가로에서 가운데로 위치*/
+    
+    /*이벤트*/
+    cursor: pointer;
+
+    /*공백*/
+    margin-top: 15vh;         /*15% 위치에 배치*/
+    margin-bottom: 20vh;      /*바닥으로부터 떨어진 거리 (컴포넌트의 끝 위치)*/
+}
+
+
+.right-blue-button {
+    /*폰트*/
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+
+    /*버튼 형태*/
+    background-color: #25C2FF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /*퍼스널*/
+    align-self: flex-end; /* flex tag 내 아이템들은 기본적으로 가운데 정렬, 버튼 아이템만 우측 정렬 */
+    padding: 10px 20px;
+}
+
+.right-blue-button:hover {
+    padding: 10px 20px;
+    background-color: #7CDBFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.blue-button {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #25C2FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blue-button:hover {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #7CDBFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

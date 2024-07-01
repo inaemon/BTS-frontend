@@ -18,10 +18,13 @@ function BotInfoComponent() {
              * 3. 봇 명칭
              * 4. 봇 상세 내용
              */}
-             {/** 경로: source_v0.1/public/inae_images */}
+             {/** 봇 사진, 경로: source_v0.1/public/inae_images */}
              <img src="./inae_images/bot.png" style={{width: '150px'}}/>
-             <h4>집사봇</h4>
 
+             {/** 봇 이름 */}
+             <h4>유행이</h4>
+            
+            {/** 봇 상세 정보 */}
              <div className='botDetail'
                   style={{
                     borderRadius: '5px',
@@ -38,6 +41,7 @@ function BotInfoComponent() {
                 <p><strong>말투: </strong>친절하고 예의바름</p>
                 <p><strong>성격: </strong>딱딱해보일 수 있지만 가끔 유머를 섞어 분위기 전환을 잘함</p>
                 <p><strong>MBTI: </strong>ENFJ, 외향적인 성격을 갖고 있지만 비서 역할을 충실히 해냄</p>
+                <p><strong>기타: </strong>봇이라는 특성상 성별, 나이가 취향 등 따로 없고 친절하게 안내해주는 스타일</p>
              </div>
         </div>
     );

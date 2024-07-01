@@ -38,7 +38,7 @@ function MyHeader(/*{ portfolios = [], personalInfos = {} }*/) {
             onClick={handleMenuClick}
             style={{
                 // menu bar 배경색
-                backgroundColor: 'skyblue',
+                backgroundColor: '#29B2FF',
                 margin: 0,
                 padding: 0}}>
 
