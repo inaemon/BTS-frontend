@@ -1,6 +1,6 @@
-// 뒤에서 const 명령어를 이용해 함수 생성시 필요한 {useState}도 불러와준다.
-import React, {useState} from "react";
-import { Layout, Row, Col, Button  } from 'antd';
+import React, { useState } from "react";
+import { useLocation } from 'react-router-dom';
+import { Layout, Row, Col, Button } from 'antd';
 
 //ChatPage.js 위치를 기준으로 파일 경로 지정
 import BotInfo from "./chat_components/BotInfo";
@@ -8,6 +8,10 @@ import Chatting from "./chat_components/Chatting";
 import InputField from "./chat_components/InputField";
 
 function ChatbotPage() {
+    const location = useLocation();
+    const { userData } = location.state || {}; // 전달된 데이터를 받음
+    const user = userData?.users?.[0]; // userData에서 첫 번째 사용자 정보를 가져옴
+
     //변수(2)
     const [responseText, setResponseText] = useState('');
 
@@ -16,7 +20,6 @@ function ChatbotPage() {
     const handleBtnClick = (e) => {
         setClickedBtn(e.key);
     };
-
 
     // Visualization: 화면에 보여줄 내용, Component
     return (
@@ -28,6 +31,14 @@ function ChatbotPage() {
              * [ 메시지 입력창 ]
              */
             }
+
+            {/** 화면 상단에 사용자 정보 표시 */}
+            {user && (
+                <div style={{ marginBottom: '20px', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '5px' }}>
+                    <h3>사용자 정보 : {user.name}[{user.id}]   {user.age}세   {user.birth}  {user.sex === 'F' ? '여성' : '남성'}</h3>
+                   
+                </div>
+            )}
 
             {/** 컴포넌트(1) 챗 */}
             <div style={{
@@ -53,4 +64,4 @@ function ChatbotPage() {
     );
 };
 
-export default ChatbotPage
+export default ChatbotPage;

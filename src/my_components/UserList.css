@@ -1,0 +1,40 @@
+.user-table-container {
+    width: 50%; /* 화면의 반 정도 크기로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center; /* 수평 가운데 정렬 */
+    justify-content: flex-start; /* 수직 위쪽 정렬 */
+    padding-top: 10px; /* 테이블 컨테이너의 상단 여백 추가 */
+}
+
+.user-table-container h1 {
+    margin-bottom: 5px; /* 헤더와 테이블 간의 간격 줄이기 */
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 4px;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+    background-color: #f1f1f1;
+}

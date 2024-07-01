@@ -21,19 +21,13 @@
  * 
  * ===========================================================
  * 2. package.json 설정
+ * 1. http-proxy-middleware 설치
+ * npm install http-proxy-middleware --save
+ * 
  * 1) proxy 설정해주기 (그래야 서버와 연결 잘 수행됨. 백엔드 구현 아직 안 했으면 생략)
- * (1) {} 안에 아래 항목 추가
- * - "proxy": "http://서버ip:서버port"
- * 
- * -----------------------------------------------
- * - 예를 들어, 서버의 api url이 아래와 같으면
- * - const API_URL = 'http://15.164.143.17:8080/api/v1/events/saved';
- * -----------------------------------------------
- * - 아래 내용을 추가해주면 됨
- * - "proxy": "http://15.164.143.17:8080",
- * -----------------------------------------------
- * 
- * 
+ * (1) package.json파일 {} 안에 아래 항목 추가
+ *   "proxy": "https://jgf89ryt5z.apigw.ntruss.com",
+ *  
  * ===========================================================
  * 3. App.js 설정  (요 js 파일이 처음에 뜨는 Home 화면임)
  * 1) 설치한 라이브러리에서 필요한 컴포넌트 불러오기
@@ -90,6 +84,7 @@ import LoginPage from "./my_components/LoginPage";
 import FirstPage from "./my_components/FirstPage";
 import SignUpPage from "./my_components/SignUpPage";
 import ChatPage from "./my_components/ChatPage";
+import UserListPage from "./my_components/UserListPage";
 
 function App() {
   return (
@@ -118,6 +113,7 @@ function App() {
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/chat" element={<ChatPage />} />
         <Route exact path="/join" element={<SignUpPage />} />
+        <Route exact path="/user-list" element={<UserListPage />} />
       </Routes>
 
       {/* 3) Footer 추가 */}
@@ -127,34 +123,3 @@ function App() {
 }
 
 export default App;
-
-
-//////////////////////////////////////////////////////////////////
-/* 3. 기본 첫 페이지 구조 */
-/*
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-*/

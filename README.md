@@ -1,3 +1,13 @@
+# Demo
+- 1차, 2024.06.26
+  - https://youtu.be/MrY2w13auQI
+- 2차, 2024.06.27
+  1.Proxy설정하여 외부 API 접속되도록 코드 및 package.json수정
+  2. 로그인페이지 네이버 클라우드 DB USER 정보 조회 연동
+  3. 사용자목록 네이버 클라우드 DB USER 리스트 조회 연동
+  4. 챗봇페이지 로그인 사용자정보 표시
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
