@@ -1,10 +1,9 @@
 // 뒤에서 const 명령어를 이용해 함수 생성시 필요한 {useState}도 불러와준다.
 import React, { useEffect, useState } from 'react';
-import { Layout, Row, Button } from 'antd';
 import axios from 'axios'; // 백엔드와 통신
 
-// 부모로부터 setResponseText 변수를 전달받음
-function InputFieldComponent({ setResponseText }) {
+// 부모로부터 setResponseText, userAge, userSex 변수를 전달받음
+function InputFieldComponent({ setResponseText, userAge, userSex }) {
     //변수(1)
     const [inputText, setInputText] = useState('');
     
@@ -16,14 +15,21 @@ function InputFieldComponent({ setResponseText }) {
     //이벤트(2)
     const handleSubmit = async (e) => {
       e.preventDefault();
+      console.log(inputText+userAge+userSex)
       try {
-        const response = await axios.post('http://localhost:5000/chat', { message: inputText });
-        setResponseText(response.data.reply);   // 전송 후 화면에 response data 출력
+        const response = await axios.post('/ai/bts_llm', {
+          query:inputText,
+          sex: userAge,
+          age: userSex
+        });
+        console.log(response.data);
+        setResponseText(response.data);   // 전송 후 화면에 response data 출력
         setInputText(''); // 전송 후 입력 필드를 초기화합니다.
       } catch (error) {
         console.error('Error sending message:', error);
       }
     };
+
 
     // Visualization: 화면에 보여줄 내용, Component
     return (
@@ -43,8 +49,10 @@ function InputFieldComponent({ setResponseText }) {
                     }}>
 
               <input type="text"
-                      id="contents" 
+                      value={inputText}
+                      onChange={handleInputChange}
                       placeholder="챗봇에게 전송할 내용을 입력하세요"
+                      id="contents" 
                       style={{ 
                           fontSize: '15px',
                           width: '100%',  // 넓이는 화면 꽉 채우기
@@ -54,7 +62,9 @@ function InputFieldComponent({ setResponseText }) {
                           borderRadius: '5px'
                       }}
               />
-              <button className="right-blue-button" type="submit">
+              <button className="right-blue-button" 
+                      style={{ marginTop: '10px' }} 
+                      type="submit">
                   전송</button>
             </form>
         </div>

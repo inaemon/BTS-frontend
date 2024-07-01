@@ -1,31 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from 'react-router-dom'; // 네비게이션을 위해 import
 
 // 시각화 라이브러리에서 필요한 컴포넌트 가져오기
-import { Layout, Menu } from 'antd';
-
-const { Header, Content, Footer } = Layout;
+import { Layout } from 'antd';
 
 // 필요한 전역변수 생성
 const mainLogo = './inae_images/logo.png';  // 경로: job_fair_project_react_frontend/job_fair_source_v0.1/public/inae_images
 
 // 함수형 컴포넌트 생성: 메뉴 구현할 거임
 function MyHeader(/*{ portfolios = [], personalInfos = {} }*/) {
-  const navigate = useNavigate(); // 네비게이션 훅 사용
+  //변수(1) 페이지 이동을 위한 네비게이션 훅
+  const navigate = useNavigate();
 
-  // 필요한 변수 생성
-  // 로직 설명: 1) ~ 3)
-
-  // 1) 메뉴 선택 여부를 담는 변수 생성
-  // 메뉴 1을 클릭하면 Content 1이 보이고, 메뉴 2를 클릭하면 Content 2를 보이도록 수정하시오.
-  const [selectedMenu, setSelectedMenu] = useState('1');
-
-  // 2) 클릭 이벤트 생성!! (마우스 클릭시 이벤트 발생하는 기능 추가)
-  const handleMenuClick = (e) => {
-    setSelectedMenu(e.key);
-  };
-
-  // 로고 클릭 이벤트 생성
+  //이벤트(1) 로고 클릭 이벤트
   const handleLogoClick = () => {
     navigate('/'); 
   };
@@ -35,7 +22,6 @@ function MyHeader(/*{ portfolios = [], personalInfos = {} }*/) {
     // 3) <Layout /> 이든 <div /> 든 하나의 tag에 내용물을 담아서 return 해야 함.
     <Layout className="layout" style={{ margin: 0, padding: 0 }}>
       <div className="menu"
-            onClick={handleMenuClick}
             style={{
                 // menu bar 배경색
                 backgroundColor: '#29B2FF',

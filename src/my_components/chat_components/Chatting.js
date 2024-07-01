@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
+function formatText(text) {
+    const formattedText = text.replace(/\n/g, '<br>'); // \n을 <br>로 변환
+    return { __html: formattedText }; // 객체 형태로 반환
+}
+
 // InputField에서 LLM->백엔드로부터 받아온 출력데이터를 responseText라는 매개변수로 전달 받음
 function ChatOutputDisplay({ responseText }) {
     //변수(1) 화면 내용에 출력할 메시지
     const [messages, setMessages] = useState([]);
+
+    //변수(2) CSS
+    const chattingStyle = {
+        padding: '10px', backgroundColor: '#F0F7FB', borderRadius: '5px', width: '95%', height: '100%', textAlign: 'center'
+    };
 
     //이벤트(1) responseText가 변경될 때마다 값을 배열에 추가하고, 그 배열을 화면에 출력
     useEffect(() => {
@@ -15,7 +25,7 @@ function ChatOutputDisplay({ responseText }) {
 
     //Visualization: 화면에 보여줄 내용
     return (
-        <div style={{ padding: '10px', backgroundColor: '#F0F7FB', borderRadius: '5px', width: '95%', height: '100%', textAlign: 'center' }}>
+        <div style={chattingStyle}>
 
             {/**
              * LLM->백엔드로부터 전달받은 텍스트 출력하기
@@ -24,7 +34,8 @@ function ChatOutputDisplay({ responseText }) {
              * 디자인은 나중에 넣기: 챗봇 얼굴, 챗봇명, 내용, ...
              */}
             {messages.map((message, index) => (
-                <p key={index}>{message}</p>
+                <div key={index} dangerouslySetInnerHTML={formatText(message)}>
+                </div>
             ))}
         </div>
     );
