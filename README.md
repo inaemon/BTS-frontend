@@ -15,6 +15,14 @@
 - 4차, 2024.06.29, 5번째 commit
   - https://youtu.be/knpAB1a2IY4
   - 로딩창과 UI 업데이트
+- 5차, 2024.07.02, 7번째 commit
+  - https://youtu.be/Vh-q9craFTo
+  - 고종훈님의 서포트
+  - 챗봇 관련 프록시 추가
+  - package.json 설정
+  - 채팅창 스크롤 추가
+  - 채팅 페이지에서 로딩이 페이지 형태가 아닌 이미지로 보이도록 수정 완료
+  - 채팅 이벤트 구현 완료 (백엔드 flask 필요)
 
 
 # Getting Started with Create React App

@@ -19,8 +19,8 @@ function InputFieldComponent({ setResponseText, userAge, userSex }) {
       try {
         const response = await axios.post('/ai/bts_llm', {
           query:inputText,
-          sex: userAge,
-          age: userSex
+          age: userAge,
+          sex: userSex
         });
         console.log(response.data);
         setResponseText(response.data);   // 전송 후 화면에 response data 출력

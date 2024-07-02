@@ -11,4 +11,18 @@ module.exports = function(app) {
       },
     })
   );
+
+  // 채팅 페이지에서 POST(/ai/bts_llm) 요청을 보냄
+  // 아래 라우팅을 추가해줘야 동작함
+  // /bts_llm 요청에 대한 처리 추가
+  app.use(
+    '/ai',
+    createProxyMiddleware({
+      target: 'http://127.0.0.1:5000',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/ai': '', // 실제 서버에서 이 경로를 제거하여 처리합니다.
+      },
+    })
+  );
 };
